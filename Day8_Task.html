@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>30-Minute Practice Session: HTML Forms</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding: 0;
+      background: #f9f9f9;
+    }
+    h2 {
+      color: #333;
+    }
+    form {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    fieldset {
+      margin-bottom: 20px;
+      border: 2px solid #ddd;
+      padding: 15px;
+      border-radius: 5px;
+    }
+    legend {
+      padding: 0 10px;
+      font-weight: bold;
+      color: #555;
+    }
+    /* Custom radio and checkbox */
+    input[type="radio"], input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+    }
+    input[type="radio"]:checked, input[type="checkbox"]:checked {
+      background-color: #4CAF50;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      form {
+        padding: 15px;
+      }
+      input, textarea, button {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>HTML Forms Practice</h1>
+
+  <!-- Task 1: Simple Contact Form -->
+  <h2>Task 1: Simple Contact Form</h2>
+  <form action="/submit" method="POST">
+    <label for="name1">Name:</label>
+    <input type="text" id="name1" name="name" required>
+
+    <label for="email1">Email:</label>
+    <input type="email" id="email1" name="email" required>
+
+    <label for="message1">Message:</label>
+    <textarea id="message1" name="message" required></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- Task 2: Form with HTML5 Validation -->
+  <h2>Task 2: Form with HTML5 Validation</h2>
+  <form action="/submit" method="POST">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required pattern="(?=.*[A-Z]).{6,}" title="Password must be at least 6 characters long and contain at least one uppercase letter">
+
+    <label for="email2">Email:</label>
+    <input type="email" id="email2" name="email" required>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- Task 3: Multi-Page Form with Fieldset -->
+  <h2>Task 3: Multi-Page Form with Fieldset</h2>
+  <form action="/submit" method="POST">
+    <fieldset>
+      <legend>Personal Information</legend>
+      <label for="first-name">First Name:</label>
+      <input type="text" id="first-name" name="first-name" required>
+
+      <label for="last-name">Last Name:</label>
+      <input type="text" id="last-name" name="last-name" required>
+    </fieldset>
+
+    <fieldset>
+      <legend>Address Information</legend>
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" required>
+
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city" required>
+    </fieldset>
+
+    <fieldset>
+      <legend>Contact Details</legend>
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="email3">Email:</label>
+      <input type="email" id="email3" name="email" required>
+    </fieldset>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- Task 4: Form with Custom Radio Buttons and Checkboxes -->
+  <h2>Task 4: Custom Radio Buttons and Checkboxes</h2>
+  <form action="/submit" method="POST">
+    <label>Select your favorite fruit:</label>
+    <input type="radio" id="apple" name="fruit" value="apple">
+    <label for="apple">Apple</label><br>
+
+    <input type="radio" id="banana" name="fruit" value="banana">
+    <label for="banana">Banana</label><br>
+
+    <input type="radio" id="cherry" name="fruit" value="cherry">
+    <label for="cherry">Cherry</label><br><br>
+
+    <label>Select your hobbies:</label>
+    <input type="checkbox" id="reading" name="hobby" value="reading">
+    <label for="reading">Reading</label><br>
+
+    <input type="checkbox" id="swimming" name="hobby" value="swimming">
+    <label for="swimming">Swimming</label><br>
+
+    <input type="checkbox" id="cycling" name="hobby" value="cycling">
+    <label for="cycling">Cycling</label><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- Task 5: Responsive Form -->
+  <h2>Task 5: Responsive Form Design</h2>
+  <form action="/submit" method="POST">
+    <label for="name5">Name:</label>
+    <input type="text" id="name5" name="name" required>
+
+    <label for="email5">Email:</label>
+    <input type="email" id="email5" name="email" required>
+
+    <label for="message5">Message:</label>
+    <textarea id="message5" name="message" required></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+
+</body>
+</html>
